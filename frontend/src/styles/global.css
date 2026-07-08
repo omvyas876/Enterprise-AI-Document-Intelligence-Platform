@@ -1,0 +1,241 @@
+/* ============================
+   Google Font
+============================ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* ============================
+   Component & Page Styles
+============================ */
+@import "./sidebar.css";
+@import "./navbar.css";
+@import "./dashboard.css";
+@import "./upload.css";
+@import "./documents.css";
+@import "./chat.css";
+
+/* ============================
+   Global Reset
+============================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f5f7fa;
+    color: #1f2937;
+    overflow: hidden;
+}
+
+/* ============================
+   Default Elements
+============================ */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+input,
+textarea,
+select {
+    font-family: inherit;
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ============================
+   Layout
+============================ */
+.app-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.page-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 30px;
+    background: #f5f7fa;
+}
+
+/* ============================
+   Common Card
+============================ */
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================
+   Headings
+============================ */
+h1 {
+    font-size: 32px;
+    color: #1e3a8a;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* ============================
+   Primary Button
+============================ */
+.primary-btn {
+    background: #2563eb;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    background: #1d4ed8;
+}
+
+/* ============================
+   Danger Button
+============================ */
+.danger-btn {
+    background: #ef4444;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.danger-btn:hover {
+    background: #dc2626;
+}
+
+/* ============================
+   Utility Classes
+============================ */
+.text-center {
+    text-align: center;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ============================
+   Scrollbar
+============================ */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e5e7eb;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2563eb;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1d4ed8;
+}
+
+/* ============================
+   Responsive
+============================ */
+@media (max-width: 1024px) {
+    .page-content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+    }
+
+    .main-container {
+        width: 100%;
+    }
+
+    .page-content {
+        padding: 15px;
+    }
+}

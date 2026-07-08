@@ -1,0 +1,507 @@
+.chat-page{
+    display:flex;
+    flex-direction:column;
+    height:calc(100vh - 150px);
+}
+
+.page-header{
+    margin-bottom:20px;
+}
+
+.page-header h1{
+    color:#1E3A8A;
+    margin-bottom:8px;
+    font-size:32px;
+}
+
+.page-header p{
+    color:#666;
+    font-size:16px;
+}
+
+/* ===============================
+   Chat Box
+=================================*/
+
+.chat-box{
+    flex:1;
+    overflow-y:auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+/* ===============================
+   Empty State
+=================================*/
+
+.empty-chat{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    height:100%;
+    color:#6B7280;
+}
+
+.empty-chat h3{
+    margin:15px 0 10px;
+}
+
+.empty-chat p{
+    margin-top:8px;
+}
+
+.robot-icon{
+    font-size:70px;
+    color:#2563EB;
+    margin-bottom:20px;
+}
+
+/* ===============================
+   Messages
+=================================*/
+
+.user-message,
+.ai-message{
+
+    margin-bottom:20px;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    animation:fadeIn .3s ease;
+
+}
+
+.user-message{
+
+    background:#2563EB;
+
+    color:white;
+
+    margin-left:20%;
+
+}
+
+.user-message p{
+
+    color:white;
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    margin-top:10px;
+
+    white-space:pre-wrap;
+
+    word-break:break-word;
+
+}
+
+.ai-message{
+
+    background:#F3F4F6;
+
+    color:#111827;
+
+    margin-right:20%;
+
+}
+
+.ai-message p{
+
+    line-height:1.8;
+
+    white-space:pre-wrap;
+
+    word-break:break-word;
+
+}
+
+.message-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:12px;
+
+    font-weight:700;
+
+}
+
+.message-title svg{
+
+    font-size:18px;
+
+}
+
+/* ===============================
+   Source Box
+=================================*/
+
+/* ===============================
+   Source Box
+=================================*/
+
+.source-box{
+
+    margin-top:18px;
+
+    padding:14px;
+
+    background:#EEF4FF;
+
+    border-left:5px solid #2563EB;
+
+    border-radius:10px;
+
+}
+
+.source-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin:8px 0;
+
+    color:#374151;
+
+    font-size:15px;
+
+}
+
+.general-source{
+
+    color:#047857;
+
+    font-weight:600;
+
+}
+
+/* ===============================
+   Copy Button
+=================================*/
+
+.copy-btn{
+
+    margin-top:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    border:none;
+
+    background:#2563EB;
+
+    color:white;
+
+    padding:12px 18px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.copy-btn:hover{
+
+    background:#1D4ED8;
+
+}
+
+/* ===============================
+   Chat Input
+=================================*/
+
+.chat-input{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+.chat-input input{
+
+    flex:1;
+
+    padding:16px;
+
+    border-radius:10px;
+
+    border:1px solid #D1D5DB;
+
+    outline:none;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.chat-input input:focus{
+
+    border-color:#2563EB;
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+
+}
+
+.chat-input button{
+
+    width:60px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2563EB;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.chat-input button:hover{
+
+    background:#1D4ED8;
+
+}
+
+.chat-input button:disabled{
+
+    background:#9CA3AF;
+
+    cursor:not-allowed;
+
+}
+
+/* ===============================
+   Thinking
+=================================*/
+
+.thinking-box{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    margin-top:20px;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    background:#EEF4FF;
+
+    color:#1E3A8A;
+
+}
+
+.thinking-box h4{
+
+    margin-bottom:8px;
+
+    font-size:18px;
+
+}
+
+.thinking-box p{
+
+    margin:4px 0;
+
+    color:#374151;
+
+}
+
+.thinking-icon{
+
+    font-size:30px;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ===============================
+   Responsive
+=================================*/
+
+@media (max-width:768px){
+
+    .user-message{
+        margin-left:0;
+    }
+
+    .ai-message{
+        margin-right:0;
+    }
+
+    .chat-input{
+        flex-direction:column;
+    }
+
+    .chat-input button{
+        width:100%;
+        height:50px;
+    }
+
+    .copy-btn{
+        width:100%;
+        justify-content:center;
+    }
+
+    .robot-icon{
+        font-size:55px;
+    }
+
+    .source-item{
+        font-size:14px;
+    }
+
+}
+
+/* ===============================
+   AI Answer Formatting
+=================================*/
+
+.ai-message div{
+
+    white-space:pre-wrap;
+
+    word-break:break-word;
+
+    line-height:1.8;
+
+    font-size:16px;
+
+}
+
+/* ===============================
+   Scrollbar
+=================================*/
+
+.chat-box::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.chat-box::-webkit-scrollbar-track{
+
+    background:#F1F5F9;
+
+    border-radius:20px;
+
+}
+
+.chat-box::-webkit-scrollbar-thumb{
+
+    background:#2563EB;
+
+    border-radius:20px;
+
+}
+
+.chat-box::-webkit-scrollbar-thumb:hover{
+
+    background:#1D4ED8;
+
+}
+
+/* ===============================
+   Smooth Animation
+=================================*/
+
+.user-message,
+.ai-message{
+
+    transition:all .25s ease-in-out;
+
+}
+
+.user-message:hover,
+.ai-message:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 6px 16px rgba(0,0,0,.08);
+
+}
+
+/* ===============================
+   Selection Color
+=================================*/
+
+::selection{
+
+    background:#2563EB;
+
+    color:white;
+
+}

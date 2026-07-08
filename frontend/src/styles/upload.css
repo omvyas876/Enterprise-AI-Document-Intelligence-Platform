@@ -1,0 +1,80 @@
+.upload-page{
+    max-width:900px;
+    margin:auto;
+}
+
+.page-header{
+    margin-bottom:30px;
+}
+
+.page-header h1{
+    color:#1E3A8A;
+}
+
+.page-header p{
+    color:#666;
+    margin-top:8px;
+}
+
+.upload-card{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.upload-icon{
+    font-size:70px;
+    color:#2563EB;
+    margin-bottom:20px;
+}
+
+.upload-card h2{
+    margin-bottom:20px;
+}
+
+.upload-card input{
+    margin:20px 0;
+}
+
+.selected-file{
+    margin:20px 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    font-weight:500;
+}
+
+.upload-card button{
+    margin-top:20px;
+    background:#2563EB;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.upload-card button:hover{
+    background:#1D4ED8;
+}
+
+.upload-card button:disabled{
+    background:#9CA3AF;
+    cursor:not-allowed;
+}
+
+.success-message{
+    margin-top:20px;
+    color:green;
+    font-weight:600;
+}
+
+.error-message{
+    margin-top:20px;
+    color:red;
+    font-weight:600;
+}
